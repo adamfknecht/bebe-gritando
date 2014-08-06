@@ -1,14 +1,57 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<!--[if (IE 9) & (!IEMobile)]>    <html class="no-js ie-9" lang="en">    <![endif]-->
+<!--[if gt IE 8]><!-->            <html class="no-js" lang="en-au">      <!--<![endif]-->
 <head>
-  <title>BebeGritando</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Replace `no-js` `html` hook with `js` hook -->
+  <script>
+    (function() {
+      var html = document.getElementsByTagName('html')[0]
+      html.className = html.className.replace( /(?:^|\s)no-js(?!\S)/g , 'js' );
+    })()
+  </script>
+  <!-- //Replace `no-js` `html` hook with `js` hook -->
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+
+  <!-- Only use for responsive UI's -->
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <!-- //Only use for responsive UI's -->
+
+  <!-- Prefetch DNS for external assets -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <!-- //Prefetch DNS for external assets -->
+
+  <!-- Title -->
+  <title></title>
+  <!-- //Title -->
+
+  <!-- Google Fonts -->
+
+  <!-- //Google Fonts -->
+
+  <!-- Global CSS -->
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- //Global CSS -->
+
+  <!-- IE 10+ tile icon: http://blogs.msdn.com/b/ie/archive/2012/06/08/high-quality-visuals-for-pinned-sites-in-windows-8.aspx -->
+  <meta name="msapplication-TileColor" content="#da291c">
+  <meta name="msapplication-TileImage" content="/apple-touch-icon-144x144-precomposed.png">
+  <!-- //IE 10+ tile icon -->
+
 </head>
+
 <body>
 
-<%= yield %>
+  <!-- Skip link - make sure the main content element has `id="main"` -->
+  <a href="#main" class="hide-visually skip-link">Skip to main content</a>
+  <!-- //Skip link - make sure the main content element has `id="main"` -->
 
-</body>
+  <%= yield %>
+
+  <!-- Footer -->
+
+  <!-- Global JavaScript -->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- //Global JavaScript -->
+
 </html>
